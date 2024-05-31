@@ -1,0 +1,29 @@
+{% extends 'blog/basic.html' %}
+
+  {% block body %} 
+  
+  
+  <div class="container mt-4">
+    {% for posts in all_posts %}
+  
+    <div class="row ml-5 my-5">
+      <div class="col-md-10">
+        <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-primary">World</strong>
+            <h3 class="mb-0">{{posts.1}}</h3>
+            <div class="mb-1 text-muted">{{posts.2}}</div>
+            <p class="card-text mb-auto">{{posts.3}}</p>
+            <a href="blogpost/{{posts.0}}" class="stretched-link">Continue reading</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <img src="/media/{{posts.4}}" class="bd-placeholder-img" width="220" height="200" aria-label="Placeholder: Thumbnail">
+            <title>Placeholder</title></img>
+        </div>
+        </div>
+      </div>
+     
+   
+</div>
+{% endfor %} 
+    {% endblock %}
